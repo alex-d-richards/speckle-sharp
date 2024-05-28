@@ -69,9 +69,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectorAutocad2025", "Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterAutocad2025", "..\Objects\Converters\ConverterAutocadCivil\ConverterAutocad2025\ConverterAutocad2025.csproj", "{5A4FB6D3-CAC0-43BC-BB4A-BED3845C79DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectorCivil2025", "ConnectorCivil2025\ConnectorCivil2025.csproj", "{DD5EF30C-6000-4B8A-8ECC-6F6D5C3B0CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectorCivil2025", "ConnectorCivil2025\ConnectorCivil2025.csproj", "{DD5EF30C-6000-4B8A-8ECC-6F6D5C3B0CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterCivil2025", "..\Objects\Converters\ConverterAutocadCivil\ConverterCivil2025\ConverterCivil2025.csproj", "{A8950613-B16B-461E-9549-331408DE7821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterCivil2025", "..\Objects\Converters\ConverterAutocadCivil\ConverterCivil2025\ConverterCivil2025.csproj", "{A8950613-B16B-461E-9549-331408DE7821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,10 +246,12 @@ Global
 		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{79e41261-3078-4f38-a71e-4b4020cf8f57}*SharedItemsImports = 5
 		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{8cfc7609-f640-4683-bf13-fe144d3dc50b}*SharedItemsImports = 5
 		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{9a11c16b-790f-437a-9e04-7e0d3ecdc06b}*SharedItemsImports = 5
+		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{a8950613-b16b-461e-9549-331408de7821}*SharedItemsImports = 5
 		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{ad10c167-937f-4706-9eb5-c99f86c35e8f}*SharedItemsImports = 5
 		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{b47492d9-2eda-4016-a930-7fa708c85c3d}*SharedItemsImports = 13
 		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{c7f4dfa0-18fe-4c0b-a9dc-dad74d5e6e13}*SharedItemsImports = 5
 		..\Objects\Converters\ConverterAutocadCivil\ConverterAutocadCivilShared\ConverterAutocadCivilShared.projitems*{d6731414-a695-4f89-aea1-ae2141a1dac1}*SharedItemsImports = 5
+		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{dd5ef30c-6000-4b8a-8ecc-6f6d5c3b0cee}*SharedItemsImports = 5
 		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{f4aa033f-4f85-4990-afe9-86be00abe973}*SharedItemsImports = 5
 		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{f4bfb155-7ba9-4e46-8240-9c825060c904}*SharedItemsImports = 5
 		ConnectorAutocadCivil\ConnectorAutocadCivilShared.projitems*{ff1793e1-77f5-4a92-b3f2-6d8b104e479b}*SharedItemsImports = 5
