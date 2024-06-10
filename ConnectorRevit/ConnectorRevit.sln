@@ -104,7 +104,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RevitSharedResources2025", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectorRevit2025", "ConnectorRevit2025\ConnectorRevit2025.csproj", "{6FF4E2D4-AD1C-41EA-94A0-5BB2967D5751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenerator", "..\Objects\Converters\ConverterRevit\ConverterRevitTests\TestGenerator\TestGenerator.csproj", "{EE43C2EA-7F62-4951-B72A-F7DE5EAEBBB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGenerator", "..\Objects\Converters\ConverterRevit\ConverterRevitTests\TestGenerator\TestGenerator.csproj", "{EE43C2EA-7F62-4951-B72A-F7DE5EAEBBB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,9 +120,9 @@ Global
 		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Debug|x64.Build.0 = Debug|Any CPU
 		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|x64.ActiveCfg = Release|Any CPU
 		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|x64.Build.0 = Release|Any CPU
-		{521D4AEE-08CF-4913-BBE8-5511D176D126}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{BE852BE3-37B8-4B62-AC2C-0872C41A2542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE852BE3-37B8-4B62-AC2C-0872C41A2542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE852BE3-37B8-4B62-AC2C-0872C41A2542}.Debug|x64.ActiveCfg = Debug|Any CPU

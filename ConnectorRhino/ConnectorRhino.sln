@@ -71,9 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterRhino8", "..\Objec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectorRhino8", "ConnectorRhino8\ConnectorRhino8.csproj", "{8CAB0785-FFFF-4F66-ABF0-DBC1173656DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterGrasshopper8", "..\Objects\Converters\ConverterRhinoGh\ConverterGrasshopper8\ConverterGrasshopper8.csproj", "{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterGrasshopper8", "..\Objects\Converters\ConverterRhinoGh\ConverterGrasshopper8\ConverterGrasshopper8.csproj", "{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectorGrasshopper8", "..\ConnectorGrasshopper\ConnectorGrasshopper8\ConnectorGrasshopper8.csproj", "{B3206C93-471A-43B6-8264-2A5FCAEDDF3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectorGrasshopper8", "..\ConnectorGrasshopper\ConnectorGrasshopper8\ConnectorGrasshopper8.csproj", "{B3206C93-471A-43B6-8264-2A5FCAEDDF3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,9 +201,9 @@ Global
 		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Debug Mac|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Release Mac|Any CPU.ActiveCfg = Release|Any CPU
 		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEBC5F3E-5B7E-4E09-AB1B-F8600130DB8D}.Release Mac|Any CPU.ActiveCfg = Release|Any CPU
 		{B3206C93-471A-43B6-8264-2A5FCAEDDF3E}.Debug Mac|Any CPU.ActiveCfg = Debug Mac|Any CPU
 		{B3206C93-471A-43B6-8264-2A5FCAEDDF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B3206C93-471A-43B6-8264-2A5FCAEDDF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -245,6 +245,8 @@ Global
 		ConnectorRhino\ConnectorRhinoShared\ConnectorRhinoShared.projitems*{8cab0785-ffff-4f66-abf0-dbc1173656df}*SharedItemsImports = 5
 		..\Objects\Converters\ConverterRhinoGh\ConverterRhinoGhShared\ConverterRhinoGhShared.projitems*{9454d346-a629-40e0-9ee2-7c6933ed1530}*SharedItemsImports = 5
 		ConnectorRhino\ConnectorRhinoShared\ConnectorRhinoShared.projitems*{a64acbf9-db82-4839-af99-57ed2e7989f4}*SharedItemsImports = 5
+		..\Objects\Converters\ConverterRhinoGh\ConverterRhinoGhShared\ConverterRhinoGhShared.projitems*{aebc5f3e-5b7e-4e09-ab1b-f8600130db8d}*SharedItemsImports = 5
+		..\ConnectorGrasshopper\ConnectorGrasshopperShared\ConnectorGrasshopperShared.projitems*{b3206c93-471a-43b6-8264-2a5fcaeddf3e}*SharedItemsImports = 5
 		ConnectorRhino\ConnectorRhinoShared\ConnectorRhinoShared.projitems*{b7376ec8-5d3e-47d2-96a7-748552f14c39}*SharedItemsImports = 13
 		..\Objects\Converters\ConverterRhinoGh\ConverterRhinoGhShared\ConverterRhinoGhShared.projitems*{b74cb8c1-187b-46a6-b20b-92b8c129f3ee}*SharedItemsImports = 13
 		..\ConnectorGrasshopper\ConnectorGrasshopperShared\ConnectorGrasshopperShared.projitems*{b81e0f77-1abd-4941-9d76-c0dc6b1b6b82}*SharedItemsImports = 5

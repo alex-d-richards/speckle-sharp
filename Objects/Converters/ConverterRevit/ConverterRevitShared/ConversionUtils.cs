@@ -812,6 +812,7 @@ public partial class ConverterRevit
     var points = new FilteredElementCollector(Doc).OfClass(typeof(BasePoint)).Cast<BasePoint>().ToList();
     var projectPoint = points.FirstOrDefault(o => o.IsShared == false);
     var surveyPoint = points.FirstOrDefault(o => o.IsShared == true);
+
     switch (type)
     {
       case ProjectBase: // note that the project base (ui) rotation is registered on the survey pt, not on the base point

@@ -6,6 +6,7 @@ using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
 using Autodesk.Civil.ApplicationServices;
 using Autodesk.Civil.DatabaseServices;
+using Objects.BuiltElements;
 using Objects.BuiltElements.Civil;
 using Speckle.Core.Logging;
 using Speckle.Core.Models;
@@ -730,7 +731,7 @@ public partial class ConverterAutocadCivil
   }
 
   // surfaces
-  public Mesh SurfaceToSpeckle(TinSurface surface)
+  public Topography SurfaceToSpeckle(TinSurface surface)
   {
     // output vars
     List<double> vertices = new();
@@ -772,12 +773,18 @@ public partial class ConverterAutocadCivil
       bbox = BoxToSpeckle(surface.GeometricExtents)
     };
 
+    var speckleTopography = new Topography(mesh)
+    {
+      units = ModelUnits
+    };
+
     // add tin surface props
     AddNameAndDescriptionProperty(surface.Name, surface.Description, mesh);
     Base props = Utilities.GetApplicationProps(surface, typeof(TinSurface), false);
     mesh[CivilPropName] = props;
+    speckleTopography[CivilPropName] = props;
 
-    return mesh;
+    return speckleTopography;
   }
 
   public Mesh SurfaceToSpeckle(GridSurface surface)
@@ -998,9 +1005,11 @@ public partial class ConverterAutocadCivil
   {
     // get ids pipes that are connected to this structure
     var pipeIds = new List<string>();
+    var pipeNames = new List<string>();
     for (int i = 0; i < structure.ConnectedPipesCount; i++)
     {
       pipeIds.Add(structure.get_ConnectedPipe(i).ToString());
+
     }
 
     Structure speckleStructure = new()
@@ -1008,7 +1017,8 @@ public partial class ConverterAutocadCivil
       location = PointToSpeckle(structure.Location, ModelUnits),
       pipeIds = pipeIds,
       displayValue = new List<Mesh>() { SolidToSpeckle(structure.Solid3dBody, out List<string> _) },
-      units = ModelUnits
+      units = ModelUnits,
+      //applicationId = structure.Id.ToString()
     };
 
     // assign additional structure props
@@ -1025,9 +1035,13 @@ public partial class ConverterAutocadCivil
     try { speckleStructure["floorThickness"] = structure.FloorThickness; } catch (Exception e) when (!e.IsFatal()) { }
     try { speckleStructure["rotation"] = structure.Rotation; } catch (Exception e) when (!e.IsFatal()) { }
     try { speckleStructure["material"] = structure.Material; } catch (Exception e) when (!e.IsFatal()) { }
-    try { speckleStructure["diameter"] = structure.DiameterOrWidth; } catch (Exception e) when (!e.IsFatal()) { }
-    try { speckleStructure["length"] = structure.Length; } catch (Exception e) when (!e.IsFatal()) { }
+    try { speckleStructure["diameterOuter"] = structure.DiameterOrWidth; } catch (Exception e) when (!e.IsFatal()) { }
+    try { speckleStructure["diameterInner"] = structure.InnerDiameterOrWidth; } catch (Exception e) when (!e.IsFatal()) { }
+    try { speckleStructure["lengthOuter"] = structure.Length; } catch (Exception e) when (!e.IsFatal()) { }
+    try { speckleStructure["lengthInner"] = structure.InnerLength; } catch (Exception e) when (!e.IsFatal()) { }
     try { speckleStructure["height"] = structure.Height; } catch (Exception e) when (!e.IsFatal()) { }
+    try { speckleStructure["structureId"] = structure.Id.ToString(); } catch (Exception ex) when (!ex.IsFatal()) { }
+    //try { speckleStructure["structureId"] = structure.Id; } catch (Exception ex) when (!ex.IsFatal()) { }
 
     return speckleStructure;
   }
@@ -1055,7 +1069,8 @@ public partial class ConverterAutocadCivil
       diameter = pipe.InnerDiameterOrWidth,
       length = pipe.Length3DToInsideEdge,
       displayValue = new List<Mesh> { SolidToSpeckle(pipe.Solid3dBody, out List<string> notes) },
-      units = ModelUnits
+      units = ModelUnits,
+      //applicationId = pipe.Id.ToString()
     };
 
     // assign additional pipe props
@@ -1075,6 +1090,9 @@ public partial class ConverterAutocadCivil
     try { specklePipe["material"] = pipe.Material; } catch (Exception ex) when (!ex.IsFatal()) { }
     try { specklePipe["thickness"] = pipe.WallThickness; } catch (Exception ex) when (!ex.IsFatal()) { }
     try { specklePipe["slope"] = pipe.Slope; } catch (Exception ex) when (!ex.IsFatal()) { }
+    try { specklePipe["pipeId"] = pipe.Id.ToString(); } catch (Exception ex) when (!ex.IsFatal()) { }
+    //try { specklePipe["pipeId"] = pipe.Id; } catch (Exception ex) when (!ex.IsFatal()) { }
+
 
     return specklePipe;
   }
